@@ -85,20 +85,16 @@ public class ArrayCalculatorUlits {
     }
 
     static int[] modulusInt(int[] array) {
-        int firstElement = array[0];
-        int lastElement = array[array.length - 1];
-        int modFirst = Math.abs(firstElement);
-        int modLast = Math.abs(lastElement);
+        int modFirst = Math.abs(array[0]);
+        int modLast = Math.abs(array[array.length - 1]);
         int[] newArray = {modFirst, modLast};
 
         return newArray;
     }
 
     static double[] modulusDouble(double[] array) {
-        double firstElement = array[0];
-        double lastElement = array[array.length - 1];
-        double modFirst = Math.abs(firstElement);
-        double modLast = Math.abs(lastElement);
+        double modFirst = Math.abs(array[0]);
+        double modLast = Math.abs(array[array.length - 1]);
         double[] newArray = {modFirst, modLast};
 
         return newArray;
