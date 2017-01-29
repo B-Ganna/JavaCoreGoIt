@@ -10,7 +10,7 @@ public class AddingMoneyToBalance {
                 return name + " " + (int)balances[i];
             }
         }
-        return"Owner not found";
+        return"Owner not found!";
     }
 }
 
