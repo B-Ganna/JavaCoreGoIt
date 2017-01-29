@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import static module2.homework.ArrayCalculatorUlits.*;
 import static module2.homework.MoneyWithdrawer.*;
+import static module2.homework.WithdrawerFromAccount.*;
 
 public class Runner {
     public static void main(String[] args) {
@@ -36,6 +37,17 @@ public class Runner {
         } else {
             System.out.println("NO");
         }
-
+        System.out.println("-------------------------------------------------");
+        System.out.println("Homework 2.3");
+        double[] balances = {1200, 5250, 2000, 500, 3200};
+        String[] ownerNames = {"Jane", "Anna", "Jack", "Oww", "Lane"};
+        String name = "Anna";
+        withdrawal = 4500;
+        System.out.println(fundBalances(ownerNames, name, balances, withdrawal));
+        System.out.println("-------------------------------------------------");
+        System.out.println("Homework 2.4");
+        name = "Oww";
+        double fund = 100;
+        System.out.println(AddingMoneyToBalance.fundBalances(ownerNames, name, balances, fund));
     }
 }
