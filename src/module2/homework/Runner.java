@@ -30,13 +30,7 @@ public class Runner {
         System.out.println("Homework 2.2");
         double balance = 750;
         double withdrawal = 500;
-        double comissionPercent = 0.05;
-        double balanceAfterWithdrawal = withdrawMoney(balance, withdrawal, comissionPercent);
-        if (balanceAfterWithdrawal >= 0) {
-            System.out.println("OK " + " " + withdrawal * comissionPercent + " " + balanceAfterWithdrawal);
-        } else {
-            System.out.println("NO");
-        }
+        System.out.println(withdrawMoney(balance, withdrawal));
         System.out.println("-------------------------------------------------");
         System.out.println("Homework 2.3");
         double[] balances = {1200, 5250, 2000, 500, 3200};
