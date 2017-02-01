@@ -1,8 +1,8 @@
-package module3.homework;
+package module3.homework.task3_1;
 
 
 public class Animal {
-    void walk(){
+    void walk() {
         System.out.println("I'm walking");
     }
 }

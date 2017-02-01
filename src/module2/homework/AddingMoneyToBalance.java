@@ -7,10 +7,10 @@ public class AddingMoneyToBalance {
             if (owners[i].equals(name)) {
 
                 balances[i] += fund;
-                return name + " " + (int)balances[i];
+                return name + " " + (int) balances[i];
             }
         }
-        return"Owner not found!";
+        return "Owner not found!";
     }
 }
 
