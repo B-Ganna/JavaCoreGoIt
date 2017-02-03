@@ -13,7 +13,7 @@ public class CourseRunner {
         Student student = new Student("Anna", "Bredun", 5);
         Student student1 = new Student("Bredun", new Course[]{course, course2, course3});
 
-        CollegeStudent collegeStudent = new CollegeStudent("Maks", "MAksimov", 5);
+        CollegeStudent collegeStudent = new CollegeStudent("Maks", "Maksimov", 5);
         CollegeStudent collegeStudent1 = new CollegeStudent("Maksimov", new Course[]{course, course2, course4});
         CollegeStudent collegeStudent2 = new CollegeStudent("Maks", "Maksimov", 5, "Harvard", 12, 1237629);
 
