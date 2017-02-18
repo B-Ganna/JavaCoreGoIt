@@ -33,14 +33,14 @@ public class ChinaBank extends Bank {
     }
 
     @Override
-    int getCommission(int summ) {
-        int comission = 0;
+    double getCommission(int summ) {
+        double comission = 0;
         if (getCurrency() == Currency.USD) {
-            if (summ > 1000) comission = 3;
-            else comission = 5;
+            if (summ < 1000) comission = 0.03;
+            else comission = 0.05;
         } else if (getCurrency() == Currency.EUR) {
-            if (summ > 1000) comission = 10;
-            else comission = 11;
+            if (summ < 1000) comission = 0.1;
+            else comission = 0.11;
         }
         return comission;
     }
