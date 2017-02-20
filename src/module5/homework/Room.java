@@ -67,4 +67,38 @@ public class Room {
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + price;
+        result = prime * result + persons;
+        result = prime * result + (cityName == null ? 0 : cityName.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (this == obj) {
+            return true;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Room room = (Room) obj;
+        if (price != room.price) {
+            return false;
+        }
+        if (persons != room.persons) {
+            return false;
+        }
+        if (cityName != room.cityName) {
+            return false;
+        }
+        return true;
+    }
 }
