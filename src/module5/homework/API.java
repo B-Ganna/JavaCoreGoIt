@@ -1,6 +1,8 @@
 package module5.homework;
 
 
-public interface APIinterface {
+public interface API {
     Room[] findRooms(int price, int persons, String city, String hotel);
+
+    Room[] getAll();
 }
