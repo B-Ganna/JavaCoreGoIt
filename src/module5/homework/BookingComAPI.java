@@ -27,11 +27,25 @@ public class BookingComAPI implements API {
 
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
-        return null;
+        Room[] roomsFound = new Room[10];
+        int count = 0;
+        for (Room room : roomsFound) {
+            boolean cvr = room.getPrice() == price && room.getPersons() == persons;
+            boolean cvr2 = room.getCityName() == city && room.getHotelName() == hotel;
+            if (cvr && cvr2) {
+                roomsFound[count] = room;
+                count++;
+            }
+            if (roomsFound == null) {
+                roomsFound[0] = new Room(0, 0, 0, null, null, null);
+            }
+        }
+        return roomsFound;
     }
 
     @Override
     public Room[] getAll() {
-        return new Room[0];
+        return rooms;
     }
+
 }
