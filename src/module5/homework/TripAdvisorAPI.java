@@ -24,20 +24,24 @@ public class TripAdvisorAPI implements API {
 
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
-        Room[] roomsFound = new Room[10];
+        Room searchRoom = new Room(0, price, persons, date, city, hotel);
         int count = 0;
-        for (Room room : roomsFound) {
-            boolean cvr = room.getPrice() == price && room.getPersons() == persons;
-            boolean cvr2 = room.getCityName() == city && room.getHotelName() == hotel;
-            if (cvr && cvr2) {
-                roomsFound[count] = room;
+        for (Room room : rooms) {
+            if (searchRoom.equals(room)) {
                 count++;
             }
-            if (roomsFound == null) {
-                roomsFound[0] = new Room(0, 0, 0, null, null, null);
+        }
+        int r = 0;
+        Room[] result = new Room[count];
+
+        for (Room k : rooms
+                ) {
+            if (searchRoom.equals(k)) {
+                result[r] = k;
+                r++;
             }
         }
-        return roomsFound;
+        return result;
     }
 
     @Override
